@@ -14,6 +14,8 @@ app.use(express.json());
 
 const allowedOrigins = [
   "https://mobile-inventory-management-system-theta.vercel.app",
+ "mobile-inventory-git-0c8bf0-abhishek-shindes-projects-9da0f5d5.vercel.app",
+"mobile-inventory-management-system-b3ih-llmm3c3qe.vercel.app"
 ];
 
 
