@@ -29,7 +29,7 @@ const Settings = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.put(`https://mobile-inventory-management-system-xi.vercel.app/update-admin`, {
+      const res = await axios.put(`https://mobile-inventory-management-system.vercel.app/update-admin`, {
         email,
         name,
         password: newPassword,

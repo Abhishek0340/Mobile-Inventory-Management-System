@@ -41,5 +41,7 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "vite": "^7.0.0"
-  }
+  },
+  "proxy" : "https://mobile-inventory-management-system.vercel.app"
+
 }
