@@ -9,7 +9,6 @@ const nodemailer = require("nodemailer");
 
 
 const app = express();
-app.use(express.json());
 
 
 const allowedOrigins = [
@@ -36,13 +35,10 @@ app.use(
 app.options("*", cors());
 
 
+app.use(express.json());
+
 let otpStore = {};
 
-//  app.use(cors({
-//   origin: 'https://mobile-inventory-management-system-theta.vercel.app/',
-//   methods: ["GET","POST","PUT","DELETE"],
-  
-// }));
 
 
 mongoose.connect(process.env.MONGO_URI)
