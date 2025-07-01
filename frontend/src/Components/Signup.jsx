@@ -14,12 +14,12 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:3001/register`, { name, email, password })
+      .post(`https://mobile-inventory-management-system.vercel.app/register`, { name, email, password })
       .then(() => navigate("/login"))
       .catch((err) => console.error(err));
   };
 
-  
+
   return (
     <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-green-200 via-blue-100 to-purple-200 px-4">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl border border-gray-300">

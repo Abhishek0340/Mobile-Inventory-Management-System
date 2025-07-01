@@ -27,7 +27,7 @@ const AdminDashboard = () => {
   const [achievementBadges, setAchievementBadges] = useState([]);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.Backend_URL}/bills`)
+    axios.get(`https://mobile-inventory-management-system.vercel.app/bills`)
       .then((response) => {
         const bills = response.data;
         const now = new Date();

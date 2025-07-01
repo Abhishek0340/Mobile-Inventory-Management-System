@@ -44,7 +44,7 @@ const Report = () => {
     }, 20000); 
 
     axios
-      .get(`${import.meta.env.Backend_URL}/bills`)
+      .get(`https://mobile-inventory-management-system.vercel.app/bills`)
       .then(({ data: bills }) => {
         setAllBills(bills);
 
