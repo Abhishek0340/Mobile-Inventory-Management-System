@@ -293,11 +293,31 @@ let otpStore = {};
 const app = express();
 app.use(express.json());
 
- app.use(cors({
-  origin: 'https://mobile-inventory-management-system-theta.vercel.app/',
-  methods: ["GET","POST","PUT","DELETE"],
+
+const allowedOrigins = [
+  "https://mobile-inventory-management-system-theta.vercel.app",
+];
+
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // If you're using cookies
+  })
+);
+
+
+//  app.use(cors({
+//   origin: 'https://mobile-inventory-management-system-theta.vercel.app/',
+//   methods: ["GET","POST","PUT","DELETE"],
   
-}));
+// }));
 
 
 mongoose.connect(process.env.MONGO_URI)
