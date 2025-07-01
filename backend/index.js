@@ -7,7 +7,6 @@ const SignupModel = require("./models/adminsignup");
 const ProductModel = require("./models/product");
 const nodemailer = require("nodemailer");
 
-let otpStore = {};
 
 const app = express();
 app.use(express.json());
@@ -27,12 +26,15 @@ app.use(
         callback(new Error("Not allowed by CORS"));
       }
     },
-    credentials: true, // If you're using cookies
+    credentials: true, 
   })
 );
 
 
 app.options("*", cors());
+
+
+let otpStore = {};
 
 //  app.use(cors({
 //   origin: 'https://mobile-inventory-management-system-theta.vercel.app/',
