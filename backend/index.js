@@ -294,8 +294,8 @@ const app = express();
 app.use(express.json());
 
  app.use(cors({
-  origin: 'https://mims-frontend.vercel.app/',
-  methods: ["GET","POST","PUT","DELETE"]
+  origin: 'https://mobile-inventory-management-system-theta.vercel.app/',
+  methods: ["GET","POST","PUT","DELETE"],
   
 }));
 
